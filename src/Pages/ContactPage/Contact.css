@@ -1,0 +1,9 @@
+.contact-page{
+    display: flex;
+    justify-content: center;
+}
+.contact-container{
+    width: 95%;
+    border-top: 1px solid rgb(36, 36, 36);
+    padding: 50px 0;
+}

@@ -1,0 +1,146 @@
+.hero{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 0;
+    padding-bottom: 70px;
+}
+.hero-container{
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.hero-container>h1{
+    font-size: 13vw;
+    color: rgb(230, 230, 230);
+    filter: opacity(0);
+    animation: slide-up 1s 700ms ease-out forwards;
+}
+.hero-container>h1>span{
+    font-size: 15vw;
+    color: grey;
+    padding: 0;
+
+}
+.hero-bottom{
+    width: 95%;
+    display: flex;
+}
+.hero-left{
+    width: 50%;
+    display: flex;
+    align-items: end;
+}
+.hero-left>button{
+    font-size: 1.4rem;
+    padding: 10px 70px;
+    border: 2px solid rgb(229, 229, 229);
+    background-color: #0f0f0f;
+    color: rgb(218, 208, 208);
+    border-radius: 4px;
+    filter: opacity(0);
+    animation: slide-right 1s 1000ms ease-out forwards;
+}
+.hero-left>button:hover{
+    cursor: pointer;
+    transform: scale(1.07);
+    transition: 400ms;
+}
+
+.hero-right{
+    width: 50%;
+    animation: slide-left 1s 1s ease-out forwards;
+    filter: opacity(0);
+}
+.hero-right>p{
+    padding: 20px 10px;
+    color: rgb(207, 207, 207);
+    font-size: 2rem;
+    letter-spacing: 0.005em;
+    line-height: 1.25;
+    
+}
+.hero-right>div{
+    height: 3rem;
+}
+.hero-right>div>span{
+    font-size: 2rem;
+    color: grey;
+    padding: 0 10px;
+}
+
+@keyframes slide-up {
+    from{
+        transform: translateY(50%);
+        filter: opacity(0);
+    }
+    to{
+        transform: translate(0,0);
+        filter: opacity(1);
+    }
+}
+@keyframes slide-down {
+    from{
+        transform: translateY(-100%);
+        filter: opacity(0);
+    }
+    to{
+        transform: translate(0,0);
+        filter: opacity(1);
+    }
+}
+
+@keyframes slide-left {
+    0%{
+        transform: translateX(100%);
+        filter: opacity(0);
+    }
+    100%{
+        transform: translate(0,0);
+        filter: opacity(1);
+    }
+}
+@keyframes slide-right {
+    0%{
+        transform: translateX(-100%);
+        filter: opacity(0);
+    }
+    100%{
+        transform: translate(0,0);
+        filter: opacity(1);
+    }
+}
+
+@media screen and (max-width: 550px) {
+    
+    .hero-container>h1{
+        width: 100%;
+    }
+}
+
+
+
+@media screen and (max-width: 570px) {
+    .hero-left>button{
+        margin-top: 20px;
+    }
+    .hero-bottom{
+        flex-direction: column;
+    }
+    .hero-left{
+        order: 2;
+        width: 95%;
+        justify-content: center;
+    }
+    .hero-right{
+        order: 1;
+        width: 98%;
+    }
+    .hero-right>p{
+        font-size: 4vw;
+    }
+    .hero-right>div>span{
+        font-size: 6vw;
+    }
+}

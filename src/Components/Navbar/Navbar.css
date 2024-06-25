@@ -1,0 +1,161 @@
+.navbar{
+    width: 100%;
+    padding: 25px 0;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    filter: opacity(0);
+    animation: slide-down 1s 1s ease-out forwards;
+}
+
+
+.nav-container{
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+}
+
+.logo{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+
+    p{
+        font-size: 1.2rem;
+        color: rgb(226, 226, 226);
+    }
+}
+
+.menu-hidden{
+    display: flex;
+    list-style: none;
+    align-items: center;
+    width: 300px;
+    justify-content: space-between;
+
+    li{
+        font-size: 1.1rem;
+        color: rgb(219, 219, 219);
+        text-decoration: none;
+
+        hr{
+            background-color: rgb(132, 0, 255);
+            margin-top: 5px;
+            height: 3px;
+            width: 100%;
+            border-radius: 10px;
+        }
+    }
+}
+
+.menu-open{
+    list-style: none;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.6rem;
+    padding: 10px 0;
+    right: 0;
+    width: 50%;
+    box-shadow: 0px 0px 0px 0px black;
+    border-bottom: 1px solid rgb(204, 203, 203);
+    border-left: 1px solid rgb(199, 199, 199);
+    top: 91px;
+    background-color: rgb(255, 255, 255);
+}
+.item:hover{
+    cursor: pointer;
+}
+
+.dropdown-toggle{
+    display: none;
+    border: none;
+    padding: 5px 5px;
+    background-color: white;
+}
+
+.dropdown-toggle:hover{
+    cursor: pointer;
+}
+  
+  
+
+#login{
+    color: white;
+    font-size: 1.2rem;
+    letter-spacing: 0.06em;
+    padding-bottom: 4px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-bottom: 1px solid white;
+}
+#login:hover{
+    cursor: pointer;
+}
+
+a:-webkit-any-link{
+    text-decoration: none;
+}
+
+.toggleBtnImg{
+    width: 30px;
+}
+
+
+
+@media screen and (max-width: 1100px) {
+    .menu-hidden { /* Hide menu on small screens initially */
+      display: none;
+    }
+    .dropdown-toggle { /* Show toggle button on small screens */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 3px;
+    }
+  }
+
+  @media screen and (max-width: 550px) {
+    .logo>p{
+        font-size: 1.5rem;
+    }
+    .logo>img{
+        width: 25px;
+        height: 25px;
+    }
+  }
+
+  @media screen and (max-width: 400px) {
+    .logo>p{
+        font-size: 1.3rem;
+    }
+    .logo>img{
+        width: 22px;
+        height: 22px;
+    }
+  }
+
+  @media screen and (max-width: 360px) {
+    .logo>p{
+        font-size: 5vw;
+    }
+    #login{
+        font-size: 4vw;
+    }
+    .toggleBtnImg{
+        width: 6vw;
+    }
+  }
+
+  @keyframes slide-down {
+    from{
+        transform: translateY(-100%);
+        filter: opacity(0);
+    }
+    to{
+        transform: translate(0,0);
+        filter: opacity(1);
+    }
+}
