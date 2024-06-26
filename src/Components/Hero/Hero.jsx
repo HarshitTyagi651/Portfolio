@@ -16,7 +16,7 @@ const Hero = () => {
     window.open(mailtoLink);
   };
   return (
-    <div className="hero">
+    <div className="hero" id='home-page'>
       <div className="hero-container">
         <h1>
           <span>H</span>arshit <span>T</span>yagi
@@ -28,7 +28,7 @@ const Hero = () => {
         </div>
         <div className="hero-right">
           <p className="hero-typewriter">
-          Hello, I have a background in web development and creative design. I have had 1+ years of experience and retain a design degree.
+          I'm a full-stack web developer passionate about crafting beautiful, user-friendly experiences on the web. I bring ideas to life, from design to functionality, and love collaborating to build innovative solutions.
           </p>
           <div>
           <span>{text}</span>

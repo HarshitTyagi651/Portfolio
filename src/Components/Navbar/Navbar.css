@@ -6,6 +6,9 @@
     text-align: center;
     filter: opacity(0);
     animation: slide-down 1s 1s ease-out forwards;
+    position: fixed;
+    background-color: #0f0f0f;
+    z-index: 2;
 }
 
 

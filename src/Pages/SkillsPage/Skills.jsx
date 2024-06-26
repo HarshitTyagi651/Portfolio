@@ -7,7 +7,7 @@ import './Skills.css'
 const Skills = () => {
     const {Skills} = useContext(Context)
   return (
-    <div className='skills-page'>
+    <div className='skills-page' id='skills-page'>
         <p>{`{ Skills }`}</p>
         <div className="skills">
         {

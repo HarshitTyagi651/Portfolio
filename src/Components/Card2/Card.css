@@ -67,6 +67,9 @@
         width: 90%;
         margin-bottom: 50px;
     }
+    .skill-name{
+        gap: 10px;
+    }
     .skill-name>p{
         font-size: 7vw;
         color: rgb(204, 199, 199);

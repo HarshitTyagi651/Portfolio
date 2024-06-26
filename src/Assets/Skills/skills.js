@@ -33,13 +33,13 @@ let skills = [
     {
         id: 2,
         title: "Node.js",
-        perc: "30%",
+        perc: "60%",
         image: node,
     },
     {
         id: 2,
         title: "MongoDb",
-        perc: "5%",
+        perc: "30%",
         image: mongo,
     },
 
