@@ -1,41 +1,69 @@
 .skills-page{
-    width: 100%;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: center;
+    padding-top: 50px;
 }
-.skills-page>p{
-    font-size: 1.3rem;
-    width: 95%;
-    color: rgb(229, 229, 229);
-    margin-bottom: 100px;
-}
-.skills{
-    width: 95%;
+.skills-cont{
+    width: 1200px;
+    background: linear-gradient(45deg, rgba(19, 20, 32, 0.4), rgb(14, 14, 54), rgba(19, 20, 32, 0.4));
+    border-radius: 20px;
+    box-shadow: 27px 27px 50px rgba(0, 0, 0, 0.147),
+                inset 27px 27px 50px rgba(0, 0, 0, 0.105);
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
     justify-items: center;
+    padding: 40px 30px;
 }
 
-@media screen and (max-width:1500px) {
-    .skills{
-        width: 85%;
-        grid-template-columns: 33% 33% 33%;
-    }
+.skills-cont>div{
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
 }
-@media screen and (max-width: 1150px) {
-    .skills{
-        width: 100%;
+.skills-cont>div>ul{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-left: 10%;
+    /* list-style: none; */
+}
+.skills-cont>div>h1{
+    background: linear-gradient(to right, rgb(133, 255, 133), rgb(96, 96, 248));
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: 2rem;
+}
+.skills-cont>div>ul>li{
+    color: rgb(220, 220, 220);
+    font-size: 1.1rem;
+}
+
+@media screen and (max-width: 1300px) {
+    .skills-cont{
+        width: 80%;
     }
 }
 
-@media screen and (max-width: 1000px) {
-    .skills{
+@media screen and (max-width: 950px) {
+    .skills-cont{
+        width: 80%;
         grid-template-columns: 50% 50%;
+        gap: 30px;
     }
 }
-@media screen and (max-width: 700px) {
-    .skills-page>p{
-        margin-bottom: 50px;
+
+@media screen and (max-width: 450px) {
+    .skills-cont>div>h1{
+        font-size: 1.6rem;
+    }
+    .skills-cont{
+        width: 80%;
+        max-width: 200px;
+        grid-template-columns: 100%;
+        gap: 30px;
+        place-items: start;
+    }
+    .skills-cont>div{
+        width: 80%;
     }
 }

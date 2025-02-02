@@ -1,22 +1,174 @@
-.card1>img{
-    width: 45vw;
-    background-size: cover;
-    box-shadow: 0 1px 5px grey;
+.card1{
+    min-width: 1000px;
+    height: fit-content;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    box-shadow: 5px 5px 50px rgba(0, 0, 0, 0.136);
+    /* animation: move 10s linear 1s infinite alternate; */
 }
 
-.card1>p{
+
+.card1-container{
+    display: flex;
+    padding: 15px 15px;
+    gap: 20px;
+}
+.card1-left{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    align-items: center;
+}
+
+.card1-left>img{
+    height: 320px;
+    border-radius: 4px;
+}
+.card1-right{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.card1-right>h2{
+    font-size: 2.4rem;
+    color: rgba(19, 19, 71, 0.868);
+}
+
+.card1-right>p{
+    font-size: 1.2rem;
+    letter-spacing: 0.03rem;
+    line-height: 1.2;
+    color: rgba(19, 19, 71, 0.868);
+}
+
+.card1-right>h3{
+    width: fit-content;
     font-size: 1.5rem;
+    color: rgba(19, 19, 71, 0.868);
+    border-bottom: 2px solid black;
 }
-.card1>p>span{
-    font-size: 1.3rem;
-    color: rgb(123, 123, 123);
+.card1-right>ul{
+    width: 95%;
+    height: 60px;
+    overflow: hidden;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    color: rgba(19, 19, 71, 0.868);
+    list-style: none;
+    gap: 5px;
+    padding: 10px 10px;
+    border: 1px solid rgba(19, 19, 71, 0.868);
+    border-radius: 8px;
 }
 
-@media screen and (max-width: 570px) {
-    .card1>p{
-        font-size: 5vw;
-    }
-    .card1>p>span{
-        font-size: 4vw;
+.card1-right>.visit-btns{
+    display: flex;
+    margin-top: 5px;
+    gap: 3vw;
+}
+
+.card1-right>.visit-btns>a>button{
+    padding: 10px 30px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(60deg, rgb(30, 30, 133), rgba(19, 19, 95, 0.705));
+    color: #fff;
+    box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.543);
+}
+.card1:hover{
+    .card1-container>.card1-left>img{
+        cursor: pointer;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.252),
+                -20px -20px 50px rgba(0, 0, 0, 0.165);
+    transform: scale(1.03);
+    transition: 200ms;
     }
 }
+
+@media screen and (max-width: 1100px) {
+    .card1{
+        min-width: 90vw;
+    }
+    .card1-right>h2{
+        font-size: 3.4vw;
+    }
+    
+    .card1-right>p{
+        font-size: 2vw;
+        line-height: 1.08;
+    }
+    
+    .card1-right>h3{
+        font-size: 2.3vw;
+    }
+    .card1-right>ul{
+        font-size: 1.7vw;
+    }
+}
+@media screen and (max-width: 920px) {
+    .card1-left>img{
+        height: 270px;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .card1{
+        min-width: 300px;
+        width: 300px;
+    }
+    .card1-container{
+        flex-direction: column;
+        gap: 10px;
+    }
+    .card1-left{
+        width: 100%;
+    }
+    .card1-left>img{
+        height: 200px;
+    }
+    .card1-right{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .card1-right>h2{
+        font-size: 1.5rem;
+    }
+    
+    .card1-right>p{
+        font-size: 0.9rem;
+        letter-spacing: 0.03rem;
+        line-height: 1.1;
+    }
+    
+    .card1-right>h3{
+        width: fit-content;
+        font-size: 1.1rem;
+        border-bottom: 2px solid black;
+    }
+    .card1-right>ul{
+        font-size: 0.9rem;
+    }
+    
+    .card1-right>.visit-btns{
+        display: flex;
+        margin-top: 5px;
+        gap: 3vw;
+    }
+    
+    .card1-right>.visit-btns>a>button{
+        font-size: 1rem;
+    }
+}
+

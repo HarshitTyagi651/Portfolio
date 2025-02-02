@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import close from '../../Assets/Images/close.png';
+import img from '../../Assets/Images/harshit.jpeg';
 import open from '../../Assets/Images/menu.png';
 import './Navbar.css';
 
@@ -16,6 +17,10 @@ const Navbar = () => {
     setIsOpen(!isOpen);
   };
 
+  const dropdownClose = () => {
+    setIsOpen(false);
+  }
+
   const emailAddress = 'tyagiharshit651@gmail.com'
   const handleClick = () => {
     const mailtoLink = `mailto:${emailAddress}`;
@@ -25,19 +30,17 @@ const Navbar = () => {
     <div className='navbar'>
       <div className="nav-container">
         <div className="logo">
-          <p><span>H</span>arshit <span>T</span>yagi</p>
+          <div><div style={{backgroundImage: `url(${img})`}}></div></div>
+          <h1>Portfolio</h1>
         </div>
-        {/* Menu with conditional visibility and class */}
           <ul className={  isOpen ? "menu-open" : "menu-hidden"}>
-            <a href='#home-page'><li className='item'>Home</li></a>
-            <a href='#projects-page'><li className='item'>Projects</li></a>
-            <a href='#about-page' onClick={handleAboutClick}><li className='item'>About</li></a>
-            <a href='#skills-page'><li className='item'>Skills</li></a>
+            <a href='#home-page'><li className='item'  onClick={dropdownClose}>Home</li></a>
+            <a href='#projects-page' ><li className='item' onClick={dropdownClose}>Projects</li></a>
+            <a href='#about-page' onClick={handleAboutClick}><li className='item' onClick={dropdownClose}>About</li></a>
+            <a href='#skills-page'><li className='item' onClick={dropdownClose}>Skills</li></a>
+            <a href='#education-page'><li className='item' onClick={dropdownClose}>Education</li></a>
           </ul>
-        <div className="login-cart">
-        <p id='login' onClick={handleClick}>Get in touch</p>
-        </div>
-        {/* Button to toggle dropdown (visible only on small screens) */}
+        <button  onClick={handleClick}><span>Get in touch</span></button>
         <div className="dropdown-toggle" onClick={toggleDropdown}><img className='toggleBtnImg' src={toggleBtnImg} /></div>
       </div>
     </div>

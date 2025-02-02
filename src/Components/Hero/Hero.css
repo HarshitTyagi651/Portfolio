@@ -2,145 +2,90 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 90px;
-    padding-bottom: 30px;
+    padding-top: 150px;
+    gap: 12px;
+    width: 100%;
+    overflow: hidden;
+    overflow-x: hidden;
+    width: 100%;
+    background-color: rgb(15, 15, 51);
 }
-.hero-container{
-    width: 95%;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-.hero-container>h1{
-    font-size: 13vw;
-    color: rgb(230, 230, 230);
-    filter: opacity(0);
-    animation: slide-up 1s 700ms ease-out forwards;
-}
-.hero-container>h1>span{
-    font-size: 15vw;
-    color: grey;
-    padding: 0;
 
+.hero>h1{
+    font-size: 10vw;
+    color: rgba(240, 248, 255, 0.848);
+    letter-spacing: 0.03em;
+    word-spacing: 0.03em;
+    text-shadow: 10px 10px 10px rgba(0, 0, 0, 0.941);
 }
-.hero-bottom{
-    width: 95%;
-    display: flex;
+.hero>h2{
+    font-size: 3rem;
+    color: rgba(240, 248, 255, 0.848);
+    letter-spacing: 0.03em;
+    word-spacing: 0.03em;
 }
-.hero-left{
-    width: 50%;
-    display: flex;
-    align-items: end;
+
+.hero>div{
+    min-height: 50px;
 }
-.hero-left>button{
-    font-size: 1.4rem;
-    padding: 10px 70px;
-    border: 2px solid rgb(229, 229, 229);
-    background-color: #0f0f0f;
-    color: rgb(218, 208, 208);
-    border-radius: 4px;
-    filter: opacity(0);
-    animation: slide-right 1s 1000ms ease-out forwards;
+.hero>div>span{
+    font-size: 2rem;
+    font-weight: 600;
+    color: rgb(16, 235, 255);
 }
-.hero-left>button:hover{
+.hero>a>button{
+    padding: 10px 30px;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    letter-spacing: 0.03em;
+    margin-top: 20px;
+    font-size: 1.3rem;
+    box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.41);
+    background: linear-gradient(120deg, rgb(20, 56, 167),  rgb(40, 121, 187));
+}
+
+.hero>a>button:hover{
     cursor: pointer;
-    transform: scale(1.07);
-    transition: 400ms;
+    opacity: 0.9;
 }
 
-.hero-right{
-    width: 50%;
-    animation: slide-left 1s 1s ease-out forwards;
-    filter: opacity(0);
+.hero>a>p{
+    color: rgb(78, 91, 190);
+    font-size: 1.2rem;
+    margin-top: 5px;
+    border-bottom: 1px solid rgb(78, 91, 190);
 }
-.hero-right>p{
-    padding: 20px 10px;
-    color: rgb(207, 207, 207);
-    font-size: 2rem;
-    letter-spacing: 0.005em;
-    line-height: 1.25;
-    
+.blue-shadow{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    background-color: aqua;
+    left: 100%;
+    border-radius: 50%;
+    box-shadow: -50px 20px 200px rgba(0, 255, 255, 0.331);
 }
-.hero-right>div{
-    height: 3rem;
-}
-.hero-right>div>span{
-    font-size: 2rem;
-    color: grey;
-    padding: 0 10px;
-}
-
-@keyframes slide-up {
-    from{
-        transform: translateY(50%);
-        filter: opacity(0);
-    }
-    to{
-        transform: translate(0,0);
-        filter: opacity(1);
-    }
-}
-@keyframes slide-down {
-    from{
-        transform: translateY(-100%);
-        filter: opacity(0);
-    }
-    to{
-        transform: translate(0,0);
-        filter: opacity(1);
-    }
+.green-shadow{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    background-color: rgb(191, 109, 238);
+    border-radius: 50%;
+    right: 100%;
+    box-shadow: 50px 20px 200px 80px rgba(179, 33, 212, 0.227);
 }
 
-@keyframes slide-left {
-    0%{
-        transform: translateX(100%);
-        filter: opacity(0);
+@media screen and (max-width: 750px) {
+    .hero>h1{
+        font-size: 19vw;
+        text-align: center;
+        padding: 0 20px;
     }
-    100%{
-        transform: translate(0,0);
-        filter: opacity(1);
-    }
-}
-@keyframes slide-right {
-    0%{
-        transform: translateX(-100%);
-        filter: opacity(0);
-    }
-    100%{
-        transform: translate(0,0);
-        filter: opacity(1);
-    }
-}
-
-@media screen and (max-width: 550px) {
-    
-    .hero-container>h1{
-        width: 100%;
-    }
-}
-
-
-
-@media screen and (max-width: 570px) {
-    .hero-left>button{
+    .hero>h2{
+        font-size: 7vw;
         margin-top: 20px;
     }
-    .hero-bottom{
-        flex-direction: column;
-    }
-    .hero-left{
-        order: 2;
-        width: 95%;
-        justify-content: center;
-    }
-    .hero-right{
-        order: 1;
-        width: 98%;
-    }
-    .hero-right>p{
-        font-size: 4vw;
-    }
-    .hero-right>div>span{
-        font-size: 6vw;
+    .hero>a>p{
+        margin-bottom: 30px;
     }
 }

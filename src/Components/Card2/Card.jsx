@@ -6,16 +6,14 @@ const Card = (props) => {
     backgroundImage: props.img,
   };
   return (
-    <div className="card2">
-      <div className="skill-name">
-        <p>{props.title}</p>
-        <img src={props.img}/>
-      </div>
-      <div className="progress-bar">
-        <div className="progress html" style={{ width: `${props.perc}` }}>
-          <span className="percentage">{props.perc}</span>
+    <div className="card2" >
+        <div className="card2-comp" style={props.bg}>
+        <span>{props.title}</span>
+        <div className="ratings">
+          <span>Ratings</span>
+          <span>7/10</span>
         </div>
-      </div>
+        </div>
     </div>
   );
 };
